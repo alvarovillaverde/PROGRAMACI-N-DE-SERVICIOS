@@ -20,27 +20,24 @@ public class ServicioCliente {
         return numero;
     }
 
+    public static boolean tieneDuplicados(int[] numeros) {
+        Set<Integer> set = new HashSet<>();
 
-public static boolean tieneDuplicados(int[] numeros) {
-    Set<Integer> set = new HashSet<>();
+        for (int numero : numeros) {
+            if (!set.add(numero)) {
+                System.out.println("ERROR: no puede haber números duplicados");
+                return true;
 
-    for (int numero : numeros) {
-        if (!set.add(numero)) {
-              System.out.println("ERROR: no puede haber números duplicados");
-            return true; 
-          
+            }
         }
+
+        return false;
     }
 
-    return false; 
-}
+    public static int generarReintegro() {
+        int numero = (int) (Math.random() * 10);
 
-       public static int generarReintegro() {
-        int numero = (int)  (Math.random() * 10 );
+        return numero;
+    }
 
-        return numero; 
-            }
-        
-
-           
 }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class ServicioServidor {
+public class ServicioServidor2 {
     private static int[] arrayServidor = new int[6];
     private static int complementarioServidor;
     private static int reintegroServidor;
@@ -16,7 +16,7 @@ public class ServicioServidor {
             for (int i = 0; i < arrayServidor.length; i++) {
                 arraySinRepeticiones[i] = (int) (Math.random() * 49) + 1;
             }
-            if (ServicioServidor.hayRepetidos(arraySinRepeticiones)) {
+            if (ServicioServidor2.hayRepetidos(arraySinRepeticiones)) {
                 System.out.println("Error has introducido numeros repetidos. Debes volver a ingresar el boleto completo");
                 esValido = false;
             }

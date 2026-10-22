@@ -22,8 +22,8 @@ public class Servidor {
             DataOutputStream flujoSalida = new DataOutputStream(cliente1.getOutputStream());
 
             while (true) {
-                ServicioServidor.rellenarArrayServidor();
-                ServicioServidor.mostrarArrayServidor();
+                ServicioServidor2.rellenarArrayServidor();
+                ServicioServidor2.mostrarArrayServidor();
                 int tamañoArray = flujoEntrada.readInt();
                 int[] numeros = new int[tamañoArray];
                 for (int i = 0; i < tamañoArray; i++) {
@@ -34,7 +34,7 @@ public class Servidor {
 
                 int numeroReintegro = flujoEntrada.readInt();
                 System.out.println("El numero de reintegro del cliente es: " + numeroReintegro);
-                String resultado = ServicioServidor.devolucionAlCliente(numeros,
+                String resultado = ServicioServidor2.devolucionAlCliente(numeros,
                         numeroReintegro);
                 flujoSalida.writeUTF(resultado);
                 flujoSalida.flush();
